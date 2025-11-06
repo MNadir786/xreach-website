@@ -1,0 +1,44 @@
+:root {
+  --primary: #003366;
+  --accent: #f5b642;
+  --light: #f9f9f9;
+  --text: #333;
+  --font: 'Poppins', sans-serif;
+}
+
+* {margin: 0;padding: 0;box-sizing: border-box;}
+
+body {font-family: var(--font);color: var(--text);background-color: #fff;line-height: 1.6;}
+
+.navbar {display: flex;justify-content: space-between;align-items: center;padding: 1rem 2rem;background: var(--primary);position: sticky;top: 0;z-index: 1000;}
+.navbar .logo {color: white;font-weight: 700;font-size: 1.3rem;}
+.nav-links {list-style: none;display: flex;gap: 1.5rem;}
+.nav-links a {color: white;text-decoration: none;transition: color 0.3s;}
+.nav-links a:hover {color: var(--accent);}
+
+.hero {background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), url('images/digital_services.svg') center/cover no-repeat;color: white;text-align: center;padding: 120px 20px;}
+.hero h1 {font-size: 2rem;margin-bottom: 1rem;}
+.hero p {max-width: 600px;margin: 0 auto 1.5rem;}
+.buttons {display: flex;justify-content: center;gap: 1rem;}
+.btn {padding: 0.75rem 1.5rem;border-radius: 25px;text-decoration: none;transition: background 0.3s;}
+.btn.primary {background: var(--accent);color: var(--primary);}
+.btn.secondary {border: 1px solid var(--accent);color: var(--accent);}
+.btn:hover {opacity: 0.85;}
+
+section {padding: 80px 20px;text-align: center;}
+.services, .about, .contact {background-color: var(--light);}
+h2 {margin-bottom: 40px;color: var(--primary);}
+.service-list {display: flex;justify-content: center;flex-wrap: wrap;gap: 30px;}
+.service-item {background: #fff;border-radius: 10px;padding: 20px;width: 200px;box-shadow: 0 2px 6px rgba(0,0,0,0.1);}
+.service-item img {width: 60px;height: 60px;margin-bottom: 10px;}
+
+form {display: flex;flex-direction: column;gap: 10px;max-width: 400px;margin: 0 auto 20px;}
+input, textarea {padding: 10px;border: 1px solid #ccc;border-radius: 6px;}
+textarea {height: 100px;resize: vertical;}
+.contact-info p {margin: 5px 0;}
+
+footer {background: var(--primary);color: white;text-align: center;padding: 20px;}
+.footer-links a {color: var(--accent);text-decoration: none;margin: 0 5px;}
+.footer-links a:hover {text-decoration: underline;}
+
+@media (max-width: 768px) {.service-list {flex-direction: column;align-items: center;} .hero h1 {font-size: 1.6rem;}}
