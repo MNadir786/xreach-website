@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>XReach Tax & Financial Services | Fredericksburg VA</title>
+
+    <!-- SEO (UNCHANGED) -->
+    <meta name="description"
+        content="Professional tax preparation, bookkeeping, and financial services in Fredericksburg, Virginia. Expert help for individuals, families, and small businesses. Multilingual support available.">
+    <meta name="keywords"
+        content="Tax Services Fredericksburg, Bookkeeping VA, ITIN assistance, Small Business Taxes, IRS Filing, XReach Tax, Financial Services">
+    <meta name="author" content="XReach LLC">
+
+    <link rel="canonical" href="https://x-reach.com/tax/" />
+
+    <meta name="geo.region" content="US-VA">
+    <meta name="geo.placename" content="Fredericksburg">
+    <meta name="geo.position" content="38.3037;-77.5130">
+    <meta name="ICBM" content="38.3037, -77.5130">
+
+    <meta property="og:title" content="XReach Tax & Financial Services | Fredericksburg VA" />
+    <meta property="og:description"
+        content="Trusted and accurate IRS-compliant tax preparation for individuals and businesses. Multilingual support." />
+    <meta property="og:image" content="/images/Tax.jpg" />
+    <meta property="og:url" content="https://x-reach.com/tax/" />
+    <meta property="og:type" content="business.business" />
+
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/script.js" defer></script>
+</head>
+
+<body class="light-tax-page">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">XReach Tax Services</div>
+
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/tax/" class="active">Tax</a></li>
+            <li><a href="/#services">Services</a></li>
+            <li><a href="/#why">Why Us</a></li>
+            <li><a href="/#technologies">Technologies</a></li>
+            <li><a href="/#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- BRIGHT HERO -->
+    <section class="tax-hero-bright">
+        <h1>Tax Preparation & Financial Services</h1>
+        <p>Accurate, secure, and IRS-compliant tax filing for individuals, families, and businesses.</p>
+    </section>
+
+    <!-- BRIGHT SERVICE CARDS -->
+    <section class="tax-services-bright">
+        <h2>Our Tax Services</h2>
+
+        <div class="tax-grid-bright">
+
+            <div class="tax-card-c1">
+                <h3>Individual & Family Tax Filing</h3>
+                <p>Fast, secure filing with maximum refund optimization.</p>
+            </div>
+
+            <div class="tax-card-c1">
+                <h3>Small Business Taxes</h3>
+                <p>LLCs, freelancers, contractors, and small business support.</p>
+            </div>
+
+            <div class="tax-card-c1">
+                <h3>ITIN Application Assistance</h3>
+                <p>Guidance through the complete ITIN application process.</p>
+            </div>
+
+            <div class="tax-card-c1">
+                <h3>Bookkeeping & Accounting</h3>
+                <p>Monthly bookkeeping, reconciliation, and business reports.</p>
+            </div>
+
+            <div class="tax-card-c1">
+                <h3>Business Formation Support</h3>
+                <p>LLC setup, EIN registration, and compliance guidance.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- BRIGHT CONTACT + MAP -->
+    <section class="tax-contact-bright">
+        <h2>Visit Our Office</h2>
+        <p>1320 Central Park Blvd Suite 200, Fredericksburg, VA 22401</p>
+
+        <div id="map" style="width:100%;height:380px;border-radius:12px;margin-top:20px;"></div>
+
+        <p id="mapError" style="display:none;color:red;margin-top:10px;">
+            Unable to load map. Please check your internet connection.
+        </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="tax-footer">
+        <p>© 2025 XReach LLC — Tax & Financial Services</p>
+    </footer>
+
+    <!-- MAP SCRIPT -->
+    <script>
+        function initMap() {
+            try {
+                const office = { lat: 38.3037, lng: -77.5130 };
+
+                const map = new google.maps.Map(document.getElementById("map"), {
+                    zoom: 15,
+                    center: office,
+                });
+
+                new google.maps.Marker({
+                    position: office,
+                    map: map,
+                    title: "XReach Tax Office",
+                });
+            } catch (e) {
+                document.getElementById("mapError").style.display = "block";
+            }
+        }
+    </script>
+
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGy4--ot1vkJ9uynBSwZOXZ9oNIoQqj0o&callback=initMap"></script>
+
+    <!-- CHATBOT -->
+    <div id="chatbot-icon"><img src="/images/chat-icon.png" /></div>
+    <div id="chat-window">
+        <iframe src="https://x-reach.com/chatbot/"></iframe>
+    </div>
+
+</body>
+
+</html>

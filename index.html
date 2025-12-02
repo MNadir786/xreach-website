@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>XReach | Digital & Tax Services</title>
+
+  <meta name="description"
+    content="XReach provides AI-powered digital services, tax preparation, bookkeeping, and secure automation solutions in Fredericksburg VA." />
+  <meta name="keywords"
+    content="Tax Preparation Fredericksburg, Bookkeeping, Cloud Engineering, Software Engineering, AI Automation, XReach" />
+  <meta name="author" content="XReach LLC" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+
+  <!-- Google Maps -->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGy4--ot1vkJ9uynBSwZOXZ9oNIoQqj0o&callback=initXReachMap"
+    defer></script>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">XReach</div>
+    <ul class="nav-links">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="/tax/">Tax Solutions</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#why">Why Us</a></li>
+      <li><a href="#technologies">Technologies</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="hero hero-premium">
+    <div class="hero-inner">
+      <h1>Empowering Businesses Through Smart Digital & Tax Solutions</h1>
+      <p>XReach delivers AI-powered, cloud-native, and tax-optimized solutions with trust, security, and automation at
+        the core.</p>
+
+      <div class="hero-buttons">
+        <a href="/tax/" class="btn primary">Start with Taxes</a>
+        <a href="#services" class="btn secondary">Explore Digital Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TAX HIGHLIGHT -->
+  <section id="tax" class="tax-highlight">
+    <div class="tax-highlight-content">
+      <div class="tax-text">
+        <h2>💰 Smart, Stress-Free Tax Solutions</h2>
+        <p>Whether you’re self-employed, a contractor, or a small business owner — XReach ensures every return is
+          optimized and compliant.</p>
+        <ul>
+          <li>✔ Individual & Small Business Tax Preparation</li>
+          <li>✔ Accurate Filing, Bookkeeping, & Compliance</li>
+          <li>✔ Secure Data Handling & Confidential Reports</li>
+        </ul>
+        <a href="/tax/" class="btn primary">Learn More</a>
+      </div>
+
+      <div class="tax-image">
+        <img src="images/Tax.jpg" alt="Tax Solutions" />
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="services">
+    <h2>Our Core Digital Services</h2>
+    <p class="section-subtitle">AI-powered, cloud-native, and business-focused digital transformation for modern
+      companies.</p>
+
+    <div class="service-grid">
+
+      <a href="software/" class="service-card darkblue">
+        <h3>Software Engineering</h3>
+        <p>Enterprise-grade applications built with performance, security, and scalability in mind.</p>
+      </a>
+
+      <a href="cloud/" class="service-card teal">
+        <h3>Cloud & DevOps</h3>
+        <p>CI/CD automation, observability, and secure multi-cloud infrastructure.</p>
+      </a>
+
+      <a href="ai/" class="service-card green">
+        <h3>AI & Automation</h3>
+        <p>Workflow automation and ML-powered insights to optimize operations.</p>
+      </a>
+
+      <a href="strategy/" class="service-card cyan">
+        <h3>Digital Strategy</h3>
+        <p>Full digital modernization aligned with your business growth.</p>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section id="why" class="why-us">
+    <h2>Why Partner With XReach?</h2>
+    <div class="why-grid">
+      <div class="why-card">
+        <h3>🚀 Proven Expertise</h3>
+        <p>Years of cross-industry experience in AI, automation, cloud, and secure systems.</p>
+      </div>
+
+      <div class="why-card">
+        <h3>🤝 Integrity & Trust</h3>
+        <p>Transparent reporting and commitment to long-term customer success.</p>
+      </div>
+
+      <div class="why-card">
+        <h3>⚡ Innovation at Scale</h3>
+        <p>Modern solutions designed to grow with your business.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECHNOLOGIES -->
+  <section id="technologies" class="technologies">
+    <h2>Trusted Technologies</h2>
+    <p class="tech-subtitle">We use industry-leading technologies to deliver secure, scalable, and future-ready
+      products.</p>
+
+    <div class="tech-showcase">
+      <div class="tech-card"><img src="images/Cloud.jpg" alt="">
+        <h4>Cloud Platforms</h4>
+      </div>
+      <div class="tech-card"><img src="images/AI.jpg" alt="">
+        <h4>AI & Automation</h4>
+      </div>
+      <div class="tech-card"><img src="images/Data Analytics.jpg" alt="">
+        <h4>Data Analytics</h4>
+      </div>
+      <div class="tech-card"><img src="images/CyberSecurity.jpg" alt="">
+        <h4>Cybersecurity</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP + ADDRESS (FIXED, CLEAN, COMPACT) -->
+  <section class="map-section">
+    <div class="map-wrapper">
+      <div class="map-info">
+        <h2>Visit Our Office</h2>
+        <p>1320 Central Park Blvd, Suite 200<br>Fredericksburg, VA 22401</p>
+      </div>
+
+      <div class="map-box">
+        <div id="xreach-map"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <h2>Let’s Connect</h2>
+    <p>Have a project in mind? Let’s build it together.</p>
+
+    <div class="contact-info">
+      <p>📞 (540) 693-0569</p>
+      <p>📧 <a href="mailto:contact@x-reach.com">contact@x-reach.com</a></p>
+      <p>📍 Fredericksburg, VA</p>
+      <a href="mailto:contact@x-reach.com" class="btn primary">Start a Conversation</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 XReach — Empowering Digital Innovation</p>
+    <p><a href="#">Privacy</a> | <a href="#">Terms</a> | <a href="#">Contact</a></p>
+  </footer>
+
+  <!-- CHAT -->
+  <div id="chatbot-icon" onclick="toggleChat()">
+    <img src="images/chat-icon.png" alt="Chat" />
+  </div>
+
+  <div id="chat-window">
+    <iframe src="https://x-reach.com/chatbot/" frameborder="0"></iframe>
+  </div>
+
+</body>
+
+</html>
