@@ -1,6 +1,6 @@
 /* ============================================================
-   XREACH GLOBAL SCRIPT — PRODUCTION STABLE BUILD
-   v3.0 — (Animations + Google Maps + Local Chatbot)
+   XREACH GLOBAL SCRIPT — PRODUCTION BUILD v4.0
+   (Animations + Google Maps)
 ============================================================ */
 
 /* ------------------------------
@@ -17,19 +17,23 @@ const observer = new IntersectionObserver(
   { threshold: 0.15 }
 );
 
-document.querySelectorAll("section").forEach((sec) => observer.observe(sec));
+// Fade-in effect applied to all <section> blocks
+document.querySelectorAll("section").forEach((section) => {
+  observer.observe(section);
+});
+
 
 /* ------------------------------
-   GOOGLE MAPS (Correct Office Location)
+   GOOGLE MAPS INITIALIZATION
 ------------------------------ */
 function initXReachMap() {
   const mapContainer = document.getElementById("xreach-map");
-  if (!mapContainer) return;
+  if (!mapContainer) return; // Safely exit if the element doesn't exist
 
-  // Correct coordinates for:
-  // 1320 Central Park Blvd Suite 200, Fredericksburg VA
+  // Correct office location
   const xreachLocation = { lat: 38.30393, lng: -77.51356 };
 
+  // Create map instance
   const map = new google.maps.Map(mapContainer, {
     center: xreachLocation,
     zoom: 16,
@@ -37,6 +41,7 @@ function initXReachMap() {
     disableDefaultUI: false
   });
 
+  // Marker for XReach office
   new google.maps.Marker({
     position: xreachLocation,
     map,
@@ -44,50 +49,5 @@ function initXReachMap() {
   });
 }
 
+// Expose function for Google Maps callback
 window.initXReachMap = initXReachMap;
-
-/* ------------------------------
-   CHATBOT POPUP
------------------------------- */
-const chatbotIcon = document.getElementById("chatbot-icon");
-const chatWindow = document.getElementById("chat-window");
-
-if (chatbotIcon && chatWindow) {
-  chatbotIcon.addEventListener("click", () => {
-    chatWindow.classList.toggle("open");
-  });
-}
-
-/* Auto-open on homepage only */
-if (window.location.pathname === "/" || window.location.pathname === "/index.html") {
-  setTimeout(() => {
-    if (chatWindow) chatWindow.classList.add("open");
-  }, 2500);
-}
-
-/* ------------------------------
-   SIMPLE MULTILINGUAL ENGINE (Chatbot Text)
------------------------------- */
-const chatbotTranslations = {
-  en: "How can I help you today?",
-  fa: "چطور می‌توانم کمک‌تان کنم؟",
-  ps: "زه څنګه مرسته درسره وکړم؟",
-  ur: "میں آج آپ کی کیسے مدد کر سکتا ہوں؟"
-};
-
-function applyChatbotLanguage(lang) {
-  const iframe = document.querySelector("#chat-window iframe");
-  if (!iframe) return;
-
-  try {
-    iframe.contentWindow.postMessage(
-      { type: "set_language", text: chatbotTranslations[lang] },
-      "*"
-    );
-  } catch (e) {
-    console.warn("Chatbot language transfer failed:", e);
-  }
-}
-
-const savedLang = localStorage.getItem("xreach-chatbot-lang") || "en";
-applyChatbotLanguage(savedLang);

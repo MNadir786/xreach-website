@@ -4,7 +4,25 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Web Development | XReach</title>
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Professional web development services for businesses. From websites to complete platforms, XReach builds secure, fast, and user-friendly experiences.">
+    <meta name="keywords"
+        content="web development, business website, web applications, website design, professional websites">
+    <meta name="author" content="XReach LLC">
+
+    <link rel="canonical" href="https://www.x-reach.com/web/" />
+
+    <!-- OG Tags -->
+    <meta property="og:title" content="Web Development | XReach" />
+    <meta property="og:description"
+        content="Build modern, beautiful, and secure web experiences tailored to your business needs." />
+    <meta property="og:image" content="/images/web.png" />
+    <meta property="og:url" content="https://www.x-reach.com/web/" />
+    <meta property="og:type" content="website" />
 
     <link rel="stylesheet" href="/style.css" />
     <script src="/script.js" defer></script>
@@ -42,7 +60,14 @@
     <!-- HERO -->
     <section class="tax-hero">
         <h1>Modern Web Development</h1>
-        <p>From landing pages to full enterprise systems — secure, fast, and beautifully designed.</p>
+        <p>Beautiful, fast, and secure web experiences that help your business stand out.</p>
+
+        <div style="max-width:700px;margin:25px auto;">
+            <picture>
+                <source srcset="/images/web.webp" type="image/webp">
+                <img src="/images/web.png" alt="Web Development" loading="lazy" style="width:100%;border-radius:12px;">
+            </picture>
+        </div>
     </section>
 
     <!-- SERVICES -->
@@ -52,15 +77,23 @@
         <div class="tax-grid">
 
             <div class="subpage-card">
-                <img src="/images/web.png" alt="Web Apps" />
+                <picture>
+                    <source srcset="/images/web.webp" type="image/webp">
+                    <img src="/images/web.png" alt="Web Applications" loading="lazy">
+                </picture>
                 <h3>Web Applications</h3>
-                <p>High-performance, scalable apps built with modern frameworks and cloud-native architecture.</p>
+                <p>Custom-built websites and platforms tailored to your business needs, designed for performance and
+                    reliability.</p>
             </div>
 
             <div class="subpage-card">
-                <img src="/images/Cloud.jpg" alt="Backend APIs" />
-                <h3>Backend & APIs</h3>
-                <p>Secure, optimized, and production-ready APIs powering your entire digital ecosystem.</p>
+                <picture>
+                    <source srcset="/images/Cloud.webp" type="image/webp">
+                    <img src="/images/Cloud.jpg" alt="Backend Services" loading="lazy">
+                </picture>
+                <h3>Backend & Integrations</h3>
+                <p>Secure systems and integrations that power your online experiences and connect your business tools.
+                </p>
             </div>
 
         </div>
@@ -77,9 +110,7 @@
             </p>
             <p><i class="fa-solid fa-location-dot"></i> Fredericksburg, VA</p>
 
-            <a href="mailto:contact@x-reach.com" class="btn primary">
-                Start a Web Project
-            </a>
+            <a href="mailto:contact@x-reach.com" class="btn primary">Start a Web Project</a>
         </div>
     </section>
 
@@ -87,15 +118,6 @@
     <footer class="tax-footer">
         <p>© 2025 XReach — Web Development Studio</p>
     </footer>
-
-    <!-- FIXED CHATBOT -->
-    <div id="chatbot-icon">
-        <img src="/images/chat-icon.png" alt="Chat">
-    </div>
-
-    <div id="chat-window">
-        <iframe src="https://x-reach.com/chatbot/" frameborder="0"></iframe>
-    </div>
 
 </body>
 
